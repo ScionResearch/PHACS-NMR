@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+
+  <!-- Vibrant High-Contrast Emerald Squircle (Optimized for 16x16 taskbar legibility) -->
+  <rect x="20" y="20" width="472" height="472" rx="108" ry="108" fill="url(#bg6)" stroke="#34D399" stroke-width="4" />
+
+  <!-- Dark Inner Circle Shield -->
+  <circle cx="256" cy="256" r="184" fill="url(#cardDark)" />
+
+  <!-- Ultra-Bold 3-Peak Multiplet Silhouette in Pure White & Cyan -->
+  <path d="M 96,336 
+           L 142,336 
+           L 176,220 
+           L 208,336 
+           L 256,112 
+           L 304,336 
+           L 336,220 
+           L 370,336 
+           L 416,336" 
+        fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Bio-Leaf Emblem at Bottom Center -->
+  <path d="M 256,370 C 225,370 205,395 205,415 C 235,415 256,395 256,370 Z" fill="#34D399" />
+  <path d="M 256,370 C 287,370 307,395 307,415 C 277,415 256,395 256,370 Z" fill="#A3E635" />
+
+  <!-- Bold Apex Dot -->
+  <circle cx="256" cy="112" r="18" fill="#A3E635" stroke="#0F172A" stroke-width="6" />
+</svg>

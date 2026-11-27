@@ -1,0 +1,61 @@
+[project]
+name = "phacs-nmr"
+version = "2.0.0"
+description = "PHACS-NMR - PHA Polymer Characterization by NMR"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10,<3.12"
+authors = [
+    { name = "Clement Fornes", email = "clement.fornes@scionresearch.com" },
+    { name = "Samuel Damesin", email = "samuel.damesin@scionresearch.com" },
+    { name = "Ralf Gommers", email = "ralf.gommers@scionresearch.com" },
+    { name = "Wayne Schou", email = "wayne.schou@bioeconomy.nz" },
+]
+keywords = ["NMR", "PHA", "polyhydroxyalkanoates", "copolymer", "microstructure", "nmrglue", "TopSpin"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy>=1.24,<2.0",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "reportlab>=3.6",
+    "tabulate>=0.9.0",
+    "PyQt6>=6.4.0",
+    "nmrglue>=0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+phacs-nmr = "phacs_nmr.cli:main"
+phacs-nmr-gui = "phacs_nmr.gui:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/phacs_nmr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]

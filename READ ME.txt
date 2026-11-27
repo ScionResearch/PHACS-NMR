@@ -1,0 +1,73 @@
+================================================================================
+PHACS-NMR - Quick Reference (See README.md for Full Documentation)
+================================================================================
+
+Full user, developer, and scientific documentation is now located in:
+  - README.md                           : Installation, GUI & CLI usage guide
+  - docs/copolymer_models.md            : Copolymer statistical models (Kamiya D, chi, Models 1-3)
+  - docs/calibration_and_assignments.md : 1H & 13C chemical shifts & calibration constants
+  - Software Protocol v2.pdf            : Wet-lab & Bruker TopSpin 4.5.0 protocol
+
+--------------------------------------------------------------------------------
+Quick Start:
+--------------------------------------------------------------------------------
+1. Install dependencies (Python >=3.10, <3.12):
+     pip install -e ".[dev]"
+
+2. Launch the Desktop GUI:
+     python phacs_nmr.py
+   (or: python phacs_nmr_gui.py / phacs-nmr-gui)
+
+3. Run CLI Single-Spectrum or Batch Processing on 13C TopSpin ascii-spec.txt files:
+     python phacs_nmr.py <file_or_folder_path> [noise_level_5_or_10]
+
+4. Run the Automated Test Suite:
+     pytest -v
+
+--------------------------------------------------------------------------------
+Open-Source Packages & Academic Citations:
+--------------------------------------------------------------------------------
+PHACS-NMR is built on the scientific Python ecosystem. In accordance with each
+package's citation request, the underlying dependencies are cited below:
+
+- nmrglue (BSD-3-Clause):
+    J. J. Helmus, C. P. Jaroniec, J. Biomol. NMR 2013, 55(4), 355-367.
+    DOI: 10.1007/s10858-013-9718-x
+
+- SciPy (BSD-3-Clause):
+    P. Virtanen, R. Gommers, et al., Nature Methods 2020, 17(3), 261-272.
+    DOI: 10.1038/s41592-019-0686-2
+
+- NumPy (BSD-3-Clause):
+    C. R. Harris, K. J. Millman, et al., Nature 2020, 585, 357-362.
+    DOI: 10.1038/s41586-020-2649-2
+
+- Matplotlib (Matplotlib/PSF):
+    J. D. Hunter, Computing in Science & Engineering 2007, 9(3), 90-95.
+    DOI: 10.1109/MCSE.2007.55
+
+- pandas (BSD-3-Clause):
+    The pandas development team, Zenodo 2020, DOI: 10.5281/zenodo.3509134;
+    W. McKinney, Proc. 9th Python in Sci. Conf. 2010, 51-56.
+
+- seaborn (BSD-3-Clause):
+    M. L. Waskom, J. Open Source Softw. 2021, 6(60), 3021.
+    DOI: 10.21105/joss.03021
+
+- ReportLab (BSD License):
+    ReportLab Inc., ReportLab PDF Library, https://www.reportlab.com/
+
+- PyQt6 (GNU GPL v3 / Commercial):
+    Riverbank Computing Limited, PyQt6, https://www.riverbankcomputing.com/software/pyqt/
+
+- tabulate (MIT License):
+    Sergey Astanin, tabulate, https://github.com/astanin/python-tabulate
+
+- pytest & pytest-cov (MIT / BSD):
+    Holger Krekel et al., pytest, https://github.com/pytest-dev/pytest
+
+--------------------------------------------------------------------------------
+License:
+--------------------------------------------------------------------------------
+PHACS-NMR is open source software licensed under the GNU General Public License
+v3.0 or later (GPLv3+). See the LICENSE file for full terms and conditions.
